@@ -1,35 +1,19 @@
 <template>
-  <form class="avatar profile-avatar">
-    <div v-if="avatar" class="avatar__loader">
-      <label for="avatar-loader">
-        <img
-          src="@/assets/img/ava.jpeg"
-          class="avatar__img"
-          alt="user avatar"
-        />
-      </label>
-      <input
-        id="avatar-loader"
-        type="file"
-        name="typeFile"
-        accept="image/png, image/jpeg, image/jpg, image/webp"
-      />
+  <form class="avatar">
+    <div class="avatar__img">
+      <img src="@/assets/img/ava.jpeg" class="avatar__img" alt="user avatar" />
     </div>
-    <div v-else class="avatar__loader">
-      <label for="avatar-loader">
-        <img
-          src="@/assets/img/avatar__default.png"
-          class="avatar__img"
-          alt="user avatar"
+    <div class="avatar__btns">
+      <div class="avatar__btn btn_load">
+        <label for="avatar-loader"> Загрузить фото </label>
+        <input
+          id="avatar-loader"
+          type="file"
+          name="typeFile"
+          accept="image/png, image/jpeg, image/jpg, image/webp"
         />
-        <span class="avatar__txt-plug">Загрузить фото</span>
-      </label>
-      <input
-        id="avatar-loader"
-        type="file"
-        name="typeFile"
-        accept="image/png, image/jpeg, image/jpg, image/webp"
-      />
+      </div>
+      <buttom class="avatar__btn btn_delete"> Удалить фото </buttom>
     </div>
   </form>
 </template>
@@ -46,33 +30,45 @@ export default {
 
 <style scoped lang="scss">
 .avatar {
-  &__loader {
+  &__img {
     display: flex;
     width: 220px;
     height: 220px;
+    margin-bottom: 50px;
     overflow: hidden;
     border-radius: 100%;
     position: relative;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      cursor: pointer;
+    }
   }
 
-  &__img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    cursor: pointer;
+  &__btns {
+    display: flex;
   }
 
-  &__txt-plug {
-    color: #ccc;
-    transform: translate(-50%, -50%);
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-  }
+  &__btn {
+    padding: 10px;
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 700;
+    border-radius: 8px;
 
-  input[type='file'] {
-    display: none;
+    input[type='file'] {
+      display: none;
+    }
+
+    &.btn_load {
+      margin-right: 10px;
+      background: lightblue;
+    }
+    &.btn_delete {
+      background: darkorange;
+    }
   }
 }
 </style>

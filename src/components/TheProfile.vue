@@ -1,7 +1,8 @@
 <template>
-  <div>
-    <h1>Profile page</h1>
-    <TheProfileAvatar />
+  <div class="profile">
+    <div class="profile__avatar">
+      <TheProfileAvatar />
+    </div>
   </div>
 </template>
 
@@ -14,4 +15,15 @@ export default {
 }
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.profile {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__avatar {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+  }
+}
+</style>
