@@ -4,6 +4,7 @@
       class="form-group__input"
       :type="type"
       :placeholder="placeholder"
+      required
     />
     <icon-eye-closed
       v-show="type === 'password'"

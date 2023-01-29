@@ -6,6 +6,7 @@
         class="form-group__input"
         type="text"
         placeholder="Петрова Алефтина Валерьевна"
+        required
       />
     </v-form-group>
     <v-form-group label="Дата рождения">
@@ -22,10 +23,15 @@
         class="form-group__input"
         type="text"
         placeholder="superUser223@gmail.com"
+        required
       />
     </v-form-group>
-    <v-form-group label="Город" has-sup-txt>
-      <input class="form-group__input" type="text" placeholder="Торжок" />
+    <v-form-group label="Город">
+      <input
+        class="form-group__input"
+        type="text"
+        placeholder="Торжок"
+      />
     </v-form-group>
     <v-form-group label="Телефон">
       <input

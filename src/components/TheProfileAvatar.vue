@@ -13,7 +13,7 @@
           accept="image/png, image/jpeg, image/jpg, image/webp"
         />
       </div>
-      <buttom class="avatar__btn btn_delete"> Удалить фото </buttom>
+      <button class="avatar__btn btn_delete"> Удалить фото </button>
     </div>
   </div>
 </template>

@@ -25,6 +25,18 @@ body {
   color: #000;
 }
 
+button {
+  padding: 10px;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 700;
+  border: 0;
+  outline: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease-out;
+}
+
 .container {
   max-width: 1400px;
   margin: 0 auto;

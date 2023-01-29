@@ -1,12 +1,18 @@
 <template>
   <div class="profile">
-    <div class="profile__avatar">
-      <TheProfileAvatar />
-    </div>
-    <div class="profile__user-data">
-      <TheProfilePersonalData />
-      <TheProfilePassword />
-    </div>
+    <form class="profile__form">
+      <div class="profile__avatar">
+        <TheProfileAvatar />
+      </div>
+      <div class="profile__user-data">
+        <TheProfilePersonalData />
+        <TheProfilePassword />
+      </div>
+
+      <div class="profile__form-footer">
+        <button class="profile__form-btn">Сохранить</button>
+      </div>
+    </form>
   </div>
 </template>
 
@@ -26,18 +32,51 @@ export default {
 
 <style scoped lang="scss">
 .profile {
-  display: flex;
-  justify-content: center;
-
-  @media only screen and (max-width: 1280px) {
-    justify-content: space-around;
-  }
-  @media only screen and (max-width: 1024px) {
+  &__form {
+    display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  @media only screen and (max-width: 900px) {
     justify-content: center;
+
+    @media only screen and (max-width: 1280px) {
+      justify-content: space-around;
+    }
+    @media only screen and (max-width: 1024px) {
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    @media only screen and (max-width: 900px) {
+      justify-content: center;
+    }
+
+    &-footer {
+      width: 100%;
+      max-width: 970px;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    &-btn {
+      flex: none;
+      font-size: 16px;
+      line-height: 20px;
+      color: #fff;
+      background: #237CE7;
+
+      &:hover {
+        background: darken(#237CE7, 10%);
+      }
+
+      @media only screen and (max-width: 480px) {
+        font-size: 13px;
+      }
+      @media only screen and (max-width: 375px) {
+        padding: 8px;
+      }
+      @media only screen and (max-width: 320px) {
+        font-size: 12px;
+        line-height: 16px;
+      }
+    }
   }
 
   &__avatar {

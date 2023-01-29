@@ -29,10 +29,10 @@ export default {
 
 <style scoped lang="scss">
 .passwords {
-  margin: 50px 0 0;
+  margin: 50px 0;
 
   @media only screen and (max-width: 480px) {
-    margin: 35px 0 0;
+    margin: 35px 0;
   }
 }
 </style>
