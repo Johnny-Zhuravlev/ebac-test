@@ -26,8 +26,15 @@ body {
 }
 
 .container {
-  max-width: 1680px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 80px 5%;
+  padding: 80px;
+
+  @media only screen and (max-width: 768px) {
+    padding: calc(80 * 100% / 768);
+  }
+  @media only screen and (max-width: 480px) {
+    padding: 40px calc(30 * 100% / 480);;
+  }
 }
 </style>
