@@ -15,6 +15,11 @@
   min-height: calc(2 * var(--ms-border-width, 1px) + var(--ms-font-size, 1rem) * var(--ms-line-height, 1.375) + 2 * var(--ms-py, 0.5rem));
   transition: all .25s linear;
 
+  @media only screen and (max-width: 480px) {
+    min-height: unset;
+    height: fit-content;
+  }
+
   &.is-open {
     border-radius: var(--ms-radius, 8px) var(--ms-radius, 8px) 0 0;
   }
@@ -50,6 +55,8 @@
   min-height: calc(2 * var(--ms-border-width, 1px) + var(--ms-font-size, 1rem) * var(--ms-line-height, 1.375) + 2 * var(--ms-py, 0.5rem));
 
   @media only screen and (max-width: 480px) {
+    min-height: unset;
+    height: fit-content;
     justify-content: space-between;
   }
 }
@@ -120,9 +127,9 @@
   align-items: center;
 
   @media only screen and (max-width: 480px) {
-    max-width: 100%;
+    max-width: 88%;
     margin: 0;
-    padding: 8px 0 0 8px;
+    padding: 5px 0 0 8px;
   }
 }
 
@@ -141,7 +148,7 @@
   white-space: nowrap;
 
   @media only screen and (max-width: 480px) {
-    margin-bottom: 8px;
+    margin-bottom: 5px;
     font-size: 13px;
     line-height: 16px;
   }

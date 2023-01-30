@@ -66,11 +66,15 @@ export default {
 
     @media only screen and (max-width: 480px) {
       font-size: 14px;
-      line-height: 17px;
+      line-height: 18px;
     }
     @media only screen and (max-width: 360px) {
       font-size: 13px;
       line-height: 15px;
+    }
+
+    &.is-invalid {
+      border-color: red;
     }
 
     &:focus {

@@ -46,7 +46,7 @@ button {
     padding: calc(80 * 100% / 768);
   }
   @media only screen and (max-width: 480px) {
-    padding: 40px calc(30 * 100% / 480);;
+    padding: 40px calc(40 * 100% / 480);;
   }
 }
 </style>

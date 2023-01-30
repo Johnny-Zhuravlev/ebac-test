@@ -39,7 +39,9 @@ export default {
     border-radius: 100%;
     position: relative;
 
-    @media only screen and (max-width: 900px) {
+    @media only screen and (max-width: 1024px) {
+      width: 200px;
+      height: 200px;
       margin-bottom: 30px;
     }
     @media only screen and (max-width: 640px) {
